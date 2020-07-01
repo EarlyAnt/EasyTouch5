@@ -6,39 +6,42 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/EffectTest/MoveButton/MoveButton.unity
+    guid: 40604cbd909d7b44e83fb1804482c34b
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/MainMenu.unity
     guid: 48bbccfb270dc3148a7e07c72d4de07a
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/Button-Event-Input.unity
     guid: 16fdc4886511cd249b69e5d552a940fe
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/Complexe-FPS-Example.unity
     guid: 9f775d64e2f820140a765e8dae500ee0
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/DPad-Classical-Time.unity
     guid: 60c2228dba2af3a48b52c69084a686a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/DPad-Event-Input.unity
     guid: baf07ebc63c5ba04593a47e2e7e06f21
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/FPS_Example.unity
     guid: ed8b4fd5fff466a408f374cb316554c7
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/Joystick-Direct-SimpleFPS.unity
     guid: 3ee1a13285e358249a301f6311176d2c
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/Joystick-Event-Input.unity
     guid: 03ec98b4e627917459cf49c4cf9ff4ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/Joystick-Parameter.unity
     guid: 35ccf225ad55e1441a9e06acc543d8f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 1.X/TouchPad-Event-Input.unity
     guid: e1263d15ed65724498ce68cbc1ccc3dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 2.X_New Features/ThirdPerson+Jump.unity
     guid: d0600752c8afe4c46a1c60763567951b
-  - enabled: 1
+  - enabled: 0
     path: Assets/EasyTouchBundle/EasyTouchControls/Examples/Version 2.X_New Features/ThirdPersonDungeon+Jump.unity
     guid: 5d40ecbb08a26e748ae065ae5e5aa8a8
   m_configObjects: {}
