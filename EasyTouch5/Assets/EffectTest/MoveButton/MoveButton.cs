@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class MoveButton : MonoBehaviour
 {
     [SerializeField]
+    private ToggleButtons toggleButtons;
+    [SerializeField]
     private Transform button;
     [SerializeField]
     private Image icon;
@@ -20,15 +22,30 @@ public class MoveButton : MonoBehaviour
     private float speedThreshold = 1f;
     private Sequence sequence;
     private float timer;
+    public bool ToggleIsOn { get; set; }
+
+    public void ToggleOn()
+    {
+        // Debug.LogFormat("<><MoveButton.ToggleOn>axisValue: {0}, axisSpeedValue: {1}", this.touchPad.axisX.axisValue, this.touchPad.axisX.axisSpeedValue);
+        if (Mathf.Abs(this.touchPad.axisX.axisValue) < Mathf.Abs(this.valueThreshold))
+            return;
+        this.ToggleIsOn = true;
+        this.toggleButtons.SetToggles(this);
+    }
+
+    public void ToggleOff()
+    {
+        //Debug.LogFormat("<><MoveButton.ToggleOff>axisValue: {0}, axisSpeedValue: {1}", this.touchPad.axisX.axisValue, this.touchPad.axisX.axisSpeedValue);
+        if (Mathf.Abs(this.touchPad.axisX.axisValue) < Mathf.Abs(this.valueThreshold))
+            return;
+        this.ToggleIsOn = false;
+        this.toggleButtons.SetToggles(this);
+    }
 
     public void SelectButton()
     {
-        Debug.LogFormat("<><MoveButton.SelectButton>axisValue: {0}, axisSpeedValue: {1}", this.touchPad.axisX.axisValue, this.touchPad.axisX.axisSpeedValue);
-
-        if (Mathf.Abs(this.touchPad.axisX.axisValue) < Mathf.Abs(this.valueThreshold))
-            return;
-
-        DOTween.KillAll();
+        DOTween.Kill(this.icon);
+        DOTween.Kill(this.button);
         this.button.DOLocalMoveX(-this.distance, 0.5f);
         DOTween.To(() => this.timer, x => this.timer = x, 1f, 0.2f).onComplete += () =>
         {
@@ -39,13 +56,9 @@ public class MoveButton : MonoBehaviour
 
     public void UnselecteButton()
     {
-        Debug.LogFormat("<><MoveButton.UnselecteButton>axisValue: {0}, axisSpeedValue: {1}", this.touchPad.axisX.axisValue, this.touchPad.axisX.axisSpeedValue);
-
-        if (Mathf.Abs(this.touchPad.axisX.axisValue) < Mathf.Abs(this.valueThreshold))
-            return;
-
-        DOTween.KillAll();
-        this.icon.DOFade(0f, 0.2f);
+        DOTween.Kill(this.icon);
+        DOTween.Kill(this.button);
+        this.icon.DOFade(0f, 0.1f);
         this.icon.transform.DOScale(Vector3.zero, 0.2f);
         this.button.DOLocalMoveX(0, 0.3f);
     }
